@@ -1,0 +1,45 @@
+RewriteEngine on
+RewriteRule ^$ site/
+
+
+RewriteRule ^doi-mat-khau$ /site/?act=changepass [L]
+RewriteRule ^dang-xuat$ /site/?act=logout [L]
+RewriteRule ^gio-hang$ /site/?act=cartview [L]
+RewriteRule ^thanh-toan$ /site/?act=checkout [L]
+RewriteRule ^xac-nhan-gio-hang$ /site/?act=savebill [L]
+RewriteRule ^cam-on$ /site/?act=thankyou [L]
+RewriteRule ^quen-mat-khau$ /site/?act=forgotpass [L]
+RewriteRule ^thanh-toan-thanh-cong/$ /site/?act=ttthanhcong [L]
+
+RewriteRule ^dang-nhap$ /site/?act=login [L]
+RewriteRule ^dang-ky$ /site/?act=register [L]
+
+RewriteRule ^gioi-thieu$ /site/?act=gioithieu [L]
+RewriteRule ^checkout$ /site/?act=checkout [L]
+RewriteRule ^paymentchecking$ /site/?act=paymentchecking [L]
+RewriteRule ^createcheckoutsession$ /site/?act=createcheckoutsession [L]
+RewriteRule ^stripecheckout$ /site/?act=stripecheckout [L]
+RewriteRule ^createklarnaqr$ /site/?act=createklarnaqr [L]
+RewriteRule ^saveorder$ /site/?act=saveorder [L]
+RewriteRule ^lien-he$ /site/?act=contact [L]
+RewriteRule ^bao-hanh$ /site/?act=aboutus [L]
+RewriteRule ^chinh-sach-van-chuyen$ /site/?act=termofservice [L]
+RewriteRule ^impressum$ /site/?act=impressum [L]
+RewriteRule ^privacy$ /site/?act=privacypolicy [L]
+RewriteRule ^notification$ /site/?act=notification [L]
+RewriteRule ^donecheckout$ /site/?act=donecheckout [L]
+
+RewriteRule ^san-pham/([a-zA-Z0-9-]+)/trang-([0-9]+)$ /site/?act=product&slug2=$1&Page=$2 [L]
+RewriteRule ^lang/(.*)$ /site/?lang=$1 [L]
+
+
+RewriteRule ^san-pham-chi-tiet/([a-zA-Z0-9-]+)$ /site/?act=detail&slug=$1&id=$2 [L]
+
+RewriteRule ^hang/([a-zA-Z0-9-]+)-([0-9]+)/trang-([0-9]+)$ /site/?act=product&maloai=$2&Page=$3&slug=$1 [L]
+RewriteRule ^danh-muc/([a-zA-Z0-9-]+)-([0-9]+)/trang-([0-9]+)$ /site/?act=product&maloai=$2&Page=$3&slug1=$1 [L]
+
+
+
+ErrorDocument 404 /site/views/Error404.php
+
+
